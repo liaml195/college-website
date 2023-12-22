@@ -1,0 +1,124 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(43deg, #003459 0%, #007EA7 46%, #00A7E1 100%);
+    font-family: 'Poppins';
+}
+
+header {
+    position: relative;
+    height: 10%; /* Adjust as needed */
+    width: calc(100% - 20px);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.login-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.backdrop {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 25%;
+    opacity: 0.3;
+}
+
+.side-backdrop {
+    position: absolute;
+    height: auto;
+    width: 25%;
+    top: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        font-size: 4vw; 
+    }
+    
+    .backdrop {
+        width: 100%;
+        left: 0;
+    }
+}
+
+.navbar {
+    color: white;
+    float: right;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar li {
+    display: inline-block; 
+    padding: 15px; 
+    font-size: 1.1vw;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+li a::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    color: white;
+    border-color: white;
+}
+
+#player {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #333;
+    height: '390';
+    width: '640';
+}
+
+.wrapper {
+    position: absolute;
+    height: 440px;
+    width: 300px;
+    background: rgba(95, 0, 150, 0.3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+}
+
+input {
+    outline: none;
+    background: transparent;
+    border: transparent;
+    border-bottom: 3px solid rgba(51, 51, 51, 0.7);
+    border-radius: 5px;
+    height: 20px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
